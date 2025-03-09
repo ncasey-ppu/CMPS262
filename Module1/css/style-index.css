@@ -4,7 +4,7 @@ body {
     padding: 0;
     line-height: 1.6;
 }
-h1 {
+header {
     color: black;
     text-align: center;
     padding: 1rem 0;
@@ -20,9 +20,6 @@ h1 {
     gap: 10px;
     justify-content: center;
 }
-p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    padding: 10px 20px;
-
+.story {
+    margin-top: 20px;
 }
