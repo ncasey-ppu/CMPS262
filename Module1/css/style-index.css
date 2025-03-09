@@ -1,0 +1,28 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+h1 {
+    color: black;
+    text-align: center;
+    padding: 1rem 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.images img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 10px 20px;
+
+}
