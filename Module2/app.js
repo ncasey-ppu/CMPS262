@@ -5,7 +5,7 @@ const port = 3001;
 
 //Homepage
 app.get('/', (req, res) => {
-    res.sendFile("./homepage.html");
+    res.sendFile("./homepage.html", { root: __dirname });
 });
 
 //About page
