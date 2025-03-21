@@ -1,10 +1,4 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "nodemon": "^3.1.9",
-    "pg": "^8.14.1"
-  },
   "name": "module3",
   "version": "1.0.0",
   "main": "db.js",
@@ -16,5 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.1"
+  }
 }

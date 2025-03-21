@@ -4,7 +4,7 @@ const queries = require('./queries');
 //Get All Data
 const getMovies = (req, res) => {
     pool.query(queries.getMovies, (error, results) => {
-        if(error)throw error;
+        if(error) throw error;
         res.status(200).json(results.rows);
     });
 };
