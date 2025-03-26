@@ -4,6 +4,6 @@ const controller = require('./controller');
 const router = Router();
 
 router.get('/', controller.getMovies);
-router.get('/:id', controller.getMoviesById);
+router.get('/:movieId', controller.getMoviesById);
 
 module.exports = router;
