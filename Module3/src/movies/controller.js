@@ -9,10 +9,25 @@ const getMovies = (req, res) => {
     });
 };
 
-//Get Data by Param
+//Get Data by ID
+const getMoviesById = (req, res) => {
+    const movieid =parseInt(req.params.id);
+    if(isNaN(movieid)) {
+        return res.status(400).json({error: "Invalid value"})
+    } 
+    console.log("Received movieId");
+    pool.query(queries.getMoviesById, [movieid], (error, results) => {
+        if(error){
+            console.error("Database error", error);
+            return res.status(500).json({error: "Movie not found"});
+        }
+        res.status(200).json(results.rows);
+    })
+}
 //Add New Data by Param
 //Modify Data by Param
 
 module.exports = {
     getMovies,
+    getMoviesById,
 };
