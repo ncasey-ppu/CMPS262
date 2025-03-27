@@ -11,7 +11,7 @@ const getMovies = (req, res) => {
 
 //Get Data by ID
 const getMoviesById = (req, res) => {
-    const movieid =parseInt(req.params.id);
+    const movieid =parseInt(req.params.movieId);
     if(isNaN(movieid)) {
         return res.status(400).json({error: "Invalid value"})
     } 
