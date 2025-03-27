@@ -11,14 +11,14 @@ const getMovies = (req, res) => {
 
 //Get Data by ID
 const getMoviesById = (req, res) => {
-    const movieid =parseInt(req.params.movieId);
+    const movieid =parseInt(req.params.movieid, 10);
     if(isNaN(movieid)) {
         return res.status(400).json({error: "Invalid value"})
     } 
-    console.log("Received movieId");
-    pool.query(queries.getMoviesById, [movieId], (error, results) => {
+    console.log("Received movieid:", movieid);
+    pool.query(queries.getMoviesById, [movieid], (error, results) => {
         if(error){
-            console.error("Database error", error);
+            console.error("Database error:", error);
             return res.status(500).json({error: "Movie not found"});
         }
         res.status(200).json(results.rows);
