@@ -16,7 +16,7 @@ const getMoviesById = (req, res) => {
         return res.status(400).json({error: "Invalid value"})
     } 
     console.log("Received movieId");
-    pool.query(queries.getMoviesById, [movieid], (error, results) => {
+    pool.query(queries.getMoviesById, [movieId], (error, results) => {
         if(error){
             console.error("Database error", error);
             return res.status(500).json({error: "Movie not found"});
