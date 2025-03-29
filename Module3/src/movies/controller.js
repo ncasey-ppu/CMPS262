@@ -30,7 +30,6 @@ const addNewMovie = (req, res) => {
     pool.query(queries.addNewMovie, [title,year,time,actor,actress], (error, results) => {
         if(error) throw error;
         res.status(200).json(results.rows);
-        res.status(201).json("New movie added");
     });
 };
 
@@ -41,7 +40,6 @@ const updateMovie = (req, res) => {
     pool.query(queries.updateMovie, [title,year,time,actor,actress,id], (error, results) => {
         if(error) throw error;
         res.status(200).json(results.rows);
-        res.status(201).json("Movie updated successfully");
     });
 };
 
