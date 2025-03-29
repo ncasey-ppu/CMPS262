@@ -11,7 +11,7 @@ const getMovies = (req, res) => {
 
 //Get Data by ID
 const getMoviesById = (req, res) => {
-    const id =parseInt(req.params.id, 10);
+    const id = parseInt(req.params.id);
     if(isNaN(id)) {
         return res.status(400).json({error: "Invalid value"})
     } 
@@ -24,19 +24,30 @@ const getMoviesById = (req, res) => {
         res.status(200).json(results.rows);
     })
 }
-//Add New Data by Param
+//Add New Movie by Param
 const addNewMovie = (req, res) => {
     const {title,year,time,actor,actress} = req.body;
     pool.query(queries.addNewMovie, [title,year,time,actor,actress], (error, results) => {
         if(error) throw error;
         res.status(200).json(results.rows);
+        res.status(201).json("New movie added");
     });
 };
 
-//Modify Data by Param
+//Modify Movie by Param
+const updateMovie = (req, res) => {
+    const id = parseInt(req.params.id);
+    const {title,year,time,actor,actress} = req.body;
+    pool.query(queries.updateMovie, [title,year,time,actor,actress,id], (error, results) => {
+        if(error) throw error;
+        res.status(200).json(results.rows);
+        res.status(201).json("Movie updated successfully");
+    });
+};
 
 module.exports = {
     getMovies,
     getMoviesById,
     addNewMovie,
+    updateMovie,
 };
