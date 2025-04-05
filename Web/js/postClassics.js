@@ -3,7 +3,7 @@ const formEl = document.querySelector('.form');
 formEl.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(formEl);
-    const data = Object.formEntries(formData);
+    const data = Object.fromEntries(formData);
 
     if(data.title == "" || data.year == "" || data.time == ""){
         $.toaster({priority : 'danger', title : 'Error', message : 'Incomplete data'});
