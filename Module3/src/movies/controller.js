@@ -36,16 +36,43 @@ const addNewMovie = (req, res) => {
 //Modify Movie by Param
 const updateMovie = (req, res) => {
     const id = parseInt(req.params.id);
-    const {title,year,time,actor,actress} = req.body;
+    const {title,year,time, actor, actress} = req.body;
     pool.query(queries.updateMovie, [title,year,time,actor,actress,id], (error, results) => {
         if(error) throw error;
         res.status(200).json(results.rows);
     });
 };
 
+//Get Movies by Titles
+const getMovieByTitle = (req, res) => {
+    pool.query(queries.getMovieByTitle, (error, results) => {
+        if(error) throw error;
+        res.status(200).json(results.rows);
+    });
+}
+
+const getMovieDetails = (req, res) => {
+    pool.query(queries.getMovieDetails, (error, results) => {
+        if(error) throw error;
+        res.status(200).json(results.rows);
+    });
+}
+
+const updateMovieByTitle = (req, res) => {
+    const title = req.params.title;
+    const {year,time, actor, actress} = req.body;
+    pool.query(queries.updateMovieByTitle, [title, year, time, actor, actress], (error, results) => {
+        if(error) throw error;
+        res.status(200).json(results.rows);
+    });
+}
+
 module.exports = {
     getMovies,
     getMoviesById,
     addNewMovie,
     updateMovie,
+    getMovieByTitle,
+    getMovieDetails,
+    updateMovieByTitle,
 };
