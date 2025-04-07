@@ -58,14 +58,7 @@ const getMovieDetails = (req, res) => {
     });
 }
 
-const updateMovieByTitle = (req, res) => {
-    const title = req.params.title;
-    const {year,time, actor, actress} = req.body;
-    pool.query(queries.updateMovieByTitle, [title, year, time, actor, actress], (error, results) => {
-        if(error) throw error;
-        res.status(200).json(results.rows);
-    });
-}
+
 
 module.exports = {
     getMovies,
@@ -74,5 +67,4 @@ module.exports = {
     updateMovie,
     getMovieByTitle,
     getMovieDetails,
-    updateMovieByTitle,
 };
