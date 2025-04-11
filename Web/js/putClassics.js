@@ -1,4 +1,4 @@
-fetch('https://classicmovies.onrender.com/api/v1/movies/titles')
+fetch('https://classicmovies.onrender.com/api/v1/movies')
   .then(response => response.json())
   .then(data => {
     const selectElement = document.getElementById('movieSelect');
