@@ -6,3 +6,6 @@ Node.JS is used for back-end. Live Server is used to test website locally. Insta
 [Movie site on Render](https://movies-web-31qf.onrender.com/index.html)
 
 ## Usage Instructions
+Users can access the site through the Render link below. The homepage shows the database and is searchable.
+[Movie site on Render](https://movies-web-31qf.onrender.com/index.html)
+/images/homepage.png
