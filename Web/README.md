@@ -3,6 +3,6 @@ This is to create a website to link to API. One page is used to view date, one i
 
 ## Installation & Setup
 Node.JS is used for back-end. Live Server is used to test website locally. Installation of new applications was not needed. Website was deployed through Render as a static site when complete.
-[Render](https://movies-web-31qf.onrender.com/index.html)
+[Movie site on Render](https://movies-web-31qf.onrender.com/index.html)
 
 ## Usage Instructions
