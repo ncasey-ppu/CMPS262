@@ -7,4 +7,4 @@ Node.JS is used for the back end. Live Server is used to test the website locall
 ## Usage Instructions
 Users can access the site through the Render link below. The homepage shows the database and is searchable.
 [Movie site on Render](https://movies-web-31qf.onrender.com/index.html)
-(/images/homepage.png)
+![homepage](./Web/images/homepage.png)
