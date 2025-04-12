@@ -20,4 +20,6 @@ The Modify A Movie page lets users update a movie in the database. They can sele
 
 ## API Integration 
 The homepage and Add Movie page use similar functions to connect to the API:
+```
 fetch('https://classicmovies.onrender.com/api/v1/movies')
+```
