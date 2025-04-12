@@ -17,3 +17,7 @@ The Add Movie page allows users to add a new movie to the database. The movie id
 
 The Modify A Movie page lets users update a movie in the database. They can select a movie from the dropdown list and update the information using the form. 
 ![Modify](https://github.com/ncasey-ppu/CMPS262/blob/dev/Web/images/modify.png)
+
+## API Integration 
+The homepage and Add Movie page use similar functions to connect to the API:
+fetch('https://classicmovies.onrender.com/api/v1/movies')
