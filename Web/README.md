@@ -28,3 +28,8 @@ For the Modify A Movie page, I created a new query to find a movieId based on th
 ```
 fetch('https://classicmovies.onrender.com/api/v1/movies/titles')
 ```
+
+## Contributing Guidelines
+If you wish to contribute, send a pull request to the dev branch for review and approval.
+### Coding Standards
+The front end uses HTML, CSS, and JavaScript. 
