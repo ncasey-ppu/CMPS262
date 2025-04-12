@@ -23,3 +23,8 @@ The homepage and Add Movie page use similar functions to connect to the API:
 ```
 fetch('https://classicmovies.onrender.com/api/v1/movies')
 ```
+
+For the Modify A Movie page, I created a new query to find a movieId based on the title. This used the below function to connnect to the API:
+```
+fetch('https://classicmovies.onrender.com/api/v1/movies/titles')
+```
