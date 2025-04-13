@@ -35,4 +35,4 @@ If you wish to contribute, send a pull request to the dev branch for review and 
 The front end uses HTML, CSS, and JavaScript. 
 
 ## Licensing
-This is covered under the license for CMPS262.
+This falls under the license for CMPS262.
