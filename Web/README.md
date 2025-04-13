@@ -33,3 +33,6 @@ fetch('https://classicmovies.onrender.com/api/v1/movies/titles')
 If you wish to contribute, send a pull request to the dev branch for review and approval.
 ### Coding Standards
 The front end uses HTML, CSS, and JavaScript. 
+
+## Licensing
+This is covered under the license for CMPS262.
