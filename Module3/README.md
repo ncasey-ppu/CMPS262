@@ -39,7 +39,8 @@ Pushed from dev to main
 ```
 git push origin main
 ```
-From main, the API was deployed to Render along with the database.
+From main, the API was deployed to Render using Node, along with the database.
+![Render](https://github.com/ncasey-ppu/CMPS262/blob/dev/Module3/images/render.png)
 
 ## License and Contribution Guidelines
 This falls under the license for CMPS262.
