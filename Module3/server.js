@@ -1,10 +1,12 @@
 const express = require("express");
+const helmet = require("helmet");
 const moviesRoutes = require("./src/movies/routes");
 
 const app = express();
 const port = 8003;
 
 app.use(express.json());
+app.use(helmet());
 
 const cors = require("cors");
 app.use(cors({
