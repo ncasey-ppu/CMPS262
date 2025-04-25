@@ -1,3 +1,5 @@
+let notificationCount = 0;
+
 document.getElementById("notifyBtn").addEventListener("click", () => {
     const title = document.getElementById("titleInput").value.trim();
     const message = document.getElementById("messageInput").value.trim();
@@ -13,13 +15,22 @@ document.getElementById("notifyBtn").addEventListener("click", () => {
         return;
     }
 
+    //loop to count notification with 5 second delay
+    const notify = () => {
+        setTimeout(() => {
+            notificationCount++;
+            const fullMessage = `${message}\n(Notification #${notificationCount})`;
+            showNotification(title, fullMessage, icon);
+        }, 5000);
+    };
+
     //ask for permission
     if (Notification.permission === "granted") {
-        showNotification(title, message, icon);
+        notify();
     } else if (Notification.permission !== "denied") {
         Notification.requestPermission().then(permission => {
             if (permission === "granted") {
-                showNotification(title, message, icon);
+                notify();
             }
         });
     }
