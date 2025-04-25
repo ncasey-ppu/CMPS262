@@ -1,8 +1,10 @@
 document.getElementById("notifyBtn").addEventListener("click", () => {
+    const title = document.getElementById("titleInput").value.trim();
     const message = document.getElementById("messageInput").value.trim();
+    const icon = document.getElementById("iconInput").value.trim();
 
-    if (!message) {
-        alert("Please enter a message first before clicking the button");
+    if (!title || !message || !icon) {
+        alert("Please enter a title, message, and icon first before clicking the button");
         return;
     }
 
@@ -13,19 +15,19 @@ document.getElementById("notifyBtn").addEventListener("click", () => {
 
     //ask for permission
     if (Notification.permission === "granted") {
-        showNotification(message);
+        showNotification(title, message, icon);
     } else if (Notification.permission !== "denied") {
         Notification.requestPermission().then(permission => {
             if (permission === "granted") {
-                showNotification(message);
+                showNotification(title, message, icon);
             }
         });
     }
 });
 
-function showNotification(message) {
-    new Notification("New Message", {
+function showNotification(title, message, icon) {
+    new Notification(title, {
         body: message, 
-        icon: "./images/hearteyes.png"
+        icon: icon
     });
 }
